@@ -2,11 +2,13 @@
 // AKA Anonymous Self-Executing Function
 (function()
 {
+    
     function DisplayAboutPage()
     {
         console.log("About Us Page");
 
         let AboutContent = document.getElementsByTagName("main")[0];
+        let DocumentBody = document.body;
 
         let About1Paragraph = document.createElement("p");
         let About2Paragraph = document.createElement("p");
@@ -27,6 +29,19 @@
         AboutContent.appendChild(About1Paragraph);
         AboutContent.appendChild(About2Paragraph);
         AboutContent.appendChild(About3Paragraph);
+
+        document.getElementById("ProductsLink").innerHTML = "Projects";
+
+        let Footer = document.createElement("footer");
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+        
+        </div>
+        </nav>`;
+
+        Footer.innerHTML = FooterNavBar;
+        DocumentBody.appendChild(Footer);
     }
 
     function DisplayProductsPage()
@@ -39,6 +54,8 @@
         let Image2Content = document.getElementsByTagName("main")[1];
 
         let Image3Content = document.getElementsByTagName("main")[2];
+
+        let DocumentBody = document.body;
        
 
         //step 2 create an element
@@ -68,6 +85,21 @@
         ProductContent.appendChild(ProductParagraph);
         Image2Content.appendChild(Image2Paragraph);
         Image3Content.appendChild(Image3Paragraph);
+
+
+
+        document.getElementById("ProductsLink").innerHTML = "Projects";
+
+        let Footer = document.createElement("footer");
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+        
+        </div>
+        </nav>`;
+
+        Footer.innerHTML = FooterNavBar;
+        DocumentBody.appendChild(Footer);
        
     }
 
@@ -81,6 +113,8 @@
         let Services2Content = document.getElementsByTagName("main")[1];
 
         let Services3Content = document.getElementsByTagName("main")[2];
+
+        let DocumentBody = document.body;
        
 
         //step 2 create an element
@@ -110,6 +144,19 @@
         Services1Content.appendChild(Services1Paragraph);
         Services2Content.appendChild(Services2Paragraph);
         Services3Content.appendChild(Services3Paragraph);
+
+        document.getElementById("ProductsLink").innerHTML = "Projects";
+
+        let Footer = document.createElement("footer");
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+        
+        </div>
+        </nav>`;
+
+        Footer.innerHTML = FooterNavBar;
+        DocumentBody.appendChild(Footer);
     }
 
     function DisplayHomePage()
@@ -162,6 +209,19 @@
             location.href = "about.html";
         });
 
+        document.getElementById("ProductsLink").innerHTML = "Projects";
+
+
+        let Footer = document.createElement("footer");
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+        
+        </div>
+        </nav>`;
+
+        Footer.innerHTML = FooterNavBar;
+        DocumentBody.appendChild(Footer);
 
     }
 
@@ -171,6 +231,8 @@
 
         let sendButton = document.getElementById("sendButton");
         let subscribeCheckBox = document.getElementById("subscribeCheckBox");
+
+        let DocumentBody = document.body;
 
         // localStorage.setItem("1", "Dhruv");
         // console.log(localStorage.getItem("1"));
@@ -191,11 +253,26 @@
                 }
             }
         });
+
+        document.getElementById("ProductsLink").innerHTML = "Projects";
+
+        let Footer = document.createElement("footer");
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+        
+        </div>
+        </nav>`;
+
+        Footer.innerHTML = FooterNavBar;
+        DocumentBody.appendChild(Footer);
     }
 
     function DisplayContactListPage()
     {
         console.log("Contact List Page");
+
+        let DocumentBody = document.body;
 
         if(localStorage.length > 0) // check if localStorage has soemthing in it
         {
@@ -230,12 +307,25 @@
 
             contactList.innerHTML = data;
         }
+        document.getElementById("ProductsLink").innerHTML = "Projects";
+
+        let Footer = document.createElement("footer");
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+        
+        </div>
+        </nav>`;
+
+        Footer.innerHTML = FooterNavBar;
+        DocumentBody.appendChild(Footer);
     }
 
     // named function
     function Start()
     {
         console.log("App Started!!");
+        
 
         switch (document.title) 
         {
