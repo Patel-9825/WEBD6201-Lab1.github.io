@@ -71,17 +71,17 @@
         //step 3 configure new element
         Services1Paragraph.setAttribute("id", "ProductParagraph");
         Services1Paragraph.setAttribute("class", "mt-3");
-        Services1Paragraph.textContent = "Test automation was the first big project which i worked on using Selenium IDE and I have tested the whole website alongside my Group Members.";
+        Services1Paragraph.textContent = "I have developed several skills over the years but according to me, the most developed and brushed skill for me is having grip on coding for web-designing.";
         
         
         Services2Paragraph.setAttribute("id", "paragraph");
         Services2Paragraph.setAttribute("class", "mt-3");
-        Services2Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+        Services2Paragraph.textContent = "Managing your time and allocating time to particular stuff which is necessary is very important to learn and I have developed at my own very well.";
 
 
         Services3Paragraph.setAttribute("id", "paragraph");
         Services3Paragraph.setAttribute("class", "mt-3");
-        Services3Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+        Services3Paragraph.textContent = "I have worked on several projects with random people in a group and always I used to lead them with my imaginary mind and try to guide them throughout the project. So, this is also the best skill which i developed.";
         
 
         //step 4 add/insert new element
