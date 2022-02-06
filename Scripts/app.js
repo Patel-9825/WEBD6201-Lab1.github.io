@@ -5,6 +5,28 @@
     function DisplayAboutPage()
     {
         console.log("About Us Page");
+
+        let AboutContent = document.getElementsByTagName("main")[0];
+
+        let About1Paragraph = document.createElement("p");
+        let About2Paragraph = document.createElement("p");
+        let About3Paragraph = document.createElement("p");
+
+        About1Paragraph.setAttribute("id", "AboutParagraph");
+        About1Paragraph.setAttribute("class", "mt-3");
+        About1Paragraph.textContent = "Myself Dhruv Patel and I am very much fond of doing programming whenever i get time.";
+
+        About2Paragraph.setAttribute("id", "About2Paragraph");
+        About2Paragraph.setAttribute("class", "mt-3");
+        About2Paragraph.textContent = "I am so much imagination when it comes to making project and I try to implement everything into the project and that's how i am known.";
+
+        About3Paragraph.setAttribute("id", "About3Paragraph");
+        About3Paragraph.setAttribute("class", "mt-3");
+        About3Paragraph.textContent = "PS: For the lab, it is supposed to work in group but i was unfortunate to have a partner so i decided to work on my own and TBH I liked the way i work at my own. I think it's enough to talk about my own good will. Sorry for that.";
+
+        AboutContent.appendChild(About1Paragraph);
+        AboutContent.appendChild(About2Paragraph);
+        AboutContent.appendChild(About3Paragraph);
     }
 
     function DisplayProductsPage()
