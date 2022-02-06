@@ -10,11 +10,84 @@
     function DisplayProductsPage()
     {
         console.log("Products Page");
+
+        //step 1 get a reference to an entry point(s)
+        let ProductContent = document.getElementsByTagName("main")[0];
+
+        let Image2Content = document.getElementsByTagName("main")[1];
+
+        let Image3Content = document.getElementsByTagName("main")[2];
+       
+
+        //step 2 create an element
+        let ProductParagraph = document.createElement("p");
+        let Image2Paragraph = document.createElement("p");
+        let Image3Paragraph = document.createElement("p");
+        // let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>`;
+        
+
+        //step 3 configure new element
+        ProductParagraph.setAttribute("id", "ProductParagraph");
+        ProductParagraph.setAttribute("class", "mt-3");
+        ProductParagraph.textContent = "Test automation was the first big project which i worked on using Selenium IDE and I have tested the whole website alongside my Group Members.";
+        
+        
+        Image2Paragraph.setAttribute("id", "paragraph");
+        Image2Paragraph.setAttribute("class", "mt-3");
+        Image2Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+
+
+        Image3Paragraph.setAttribute("id", "paragraph");
+        Image3Paragraph.setAttribute("class", "mt-3");
+        Image3Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+        
+
+        //step 4 add/insert new element
+        ProductContent.appendChild(ProductParagraph);
+        Image2Content.appendChild(Image2Paragraph);
+        Image3Content.appendChild(Image3Paragraph);
+       
     }
 
     function DisplayServicesPage()
     {
         console.log("Services Page");
+
+        //step 1 get a reference to an entry point(s)
+        let Services1Content = document.getElementsByTagName("main")[0];
+
+        let Services2Content = document.getElementsByTagName("main")[1];
+
+        let Services3Content = document.getElementsByTagName("main")[2];
+       
+
+        //step 2 create an element
+        let Services1Paragraph = document.createElement("p");
+        let Services2Paragraph = document.createElement("p");
+        let Services3Paragraph = document.createElement("p");
+        // let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>`;
+        
+
+        //step 3 configure new element
+        Services1Paragraph.setAttribute("id", "ProductParagraph");
+        Services1Paragraph.setAttribute("class", "mt-3");
+        Services1Paragraph.textContent = "Test automation was the first big project which i worked on using Selenium IDE and I have tested the whole website alongside my Group Members.";
+        
+        
+        Services2Paragraph.setAttribute("id", "paragraph");
+        Services2Paragraph.setAttribute("class", "mt-3");
+        Services2Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+
+
+        Services3Paragraph.setAttribute("id", "paragraph");
+        Services3Paragraph.setAttribute("class", "mt-3");
+        Services3Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+        
+
+        //step 4 add/insert new element
+        Services1Content.appendChild(Services1Paragraph);
+        Services2Content.appendChild(Services2Paragraph);
+        Services3Content.appendChild(Services3Paragraph);
     }
 
     function DisplayHomePage()
@@ -22,32 +95,33 @@
 
         console.log("Home Page");
 
-        let AboutUsButton = document.getElementById("AboutUsButton");
-        AboutUsButton.addEventListener("click", function()
-        {
-            // redirect to about page
-            location.href = "about.html";
-        });
+        
         
         //step 1 get a reference to an entry point(s)
         let MainContent = document.getElementsByTagName("main")[0];
+        let MainContent2 = document.getElementsByTagName("main")[0];
         let DocumentBody = document.body;
 
         //step 2 create an element
         let MainParagraph = document.createElement("p");
-        let Article = document.createElement("article");
-        let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>`;
+        let MainParagraph2 = document.createElement("p");
+        // let Article = document.createElement("article");
+        // let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>`;
 
         //step 3 configure new element
         MainParagraph.setAttribute("id", "MainParagraph");
         MainParagraph.setAttribute("class", "mt-3");
-        MainParagraph.textContent = "This is the main Paragraph";
-        Article.setAttribute("class", "container");
+        MainParagraph.textContent = "Hi Everyone, I am Dhruv Patel and I am currently enrolled into Computer Programming Analysis course for 3 years in Durham College.";
+        MainParagraph2.setAttribute("id", "MainParagraph2");
+        MainParagraph2.setAttribute("class", "mt-3");
+        MainParagraph2.textContent = "I am working on several languages in various courses as I progress into the Program. This website is under construction so there isn't too much to display but i will make sure to show as the lab progress.";
+        // Article.setAttribute("class", "container");
 
         //step 4 add/insert new element
         MainContent.appendChild(MainParagraph);
-        Article.innerHTML = ArticleParagraph;
-        DocumentBody.appendChild(Article);
+        MainContent2.appendChild(MainParagraph2);
+        // Article.innerHTML = ArticleParagraph;
+        // DocumentBody.appendChild(Article);
 
         // Deletion example
         // document.getElementById("ArticleParagraph").remove();
@@ -58,6 +132,13 @@
         // MainContent.before(NewH1);
 
         // NewH1.textContent = "Hello, World!";
+
+        let AboutUsButton = document.getElementById("AboutUsButton");
+        AboutUsButton.addEventListener("click", function()
+        {
+            // redirect to about page
+            location.href = "about.html";
+        });
 
 
     }
@@ -148,7 +229,7 @@
           case "About Us":
             DisplayAboutPage();
             break;
-          case "Our Products":
+          case "My Products":
             DisplayProductsPage();
             break;
           case "Our Services":
