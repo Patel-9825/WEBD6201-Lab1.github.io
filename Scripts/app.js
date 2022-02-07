@@ -9,17 +9,18 @@
 // AKA Anonymous Self-Executing Function
 (function()
 {
+    // Navigation bar for footer to display CopyRight sign and year at the bottom of the page.
     let DocumentBody = document.body;
     let Footer = document.createElement("footer");
     let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
     <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
-    
     </div>
     </nav>`;
-
     Footer.innerHTML = FooterNavBar;
     DocumentBody.appendChild(Footer);
+
+
 
     /**
      * 
@@ -31,7 +32,6 @@
 
         let AboutContent = document.getElementsByTagName("main")[0];
         
-
         let About1Paragraph = document.createElement("p");
         let About2Paragraph = document.createElement("p");
         let About3Paragraph = document.createElement("p");
@@ -74,30 +74,30 @@
        
 
         //step 2 create an element
-        let ProductsParagraph = document.createElement("p");
+        let Products1Paragraph = document.createElement("p");
         let Products2Paragraph = document.createElement("p");
         let Products3Paragraph = document.createElement("p");
         // let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>`;
         
 
         //step 3 configure new element
-        Products1Paragraph.setAttribute("id", "ProductParagraph");
+        Products1Paragraph.setAttribute("id", "Products1Paragraph");
         Products1Paragraph.setAttribute("class", "mt-3");
         Products1Paragraph.textContent = "Test automation was the first big project which i worked on using Selenium IDE and I have tested the whole website alongside my Group Members.";
         
         
-        Products2Paragraph.setAttribute("id", "paragraph");
+        Products2Paragraph.setAttribute("id", "Products2Paragraph");
         Products2Paragraph.setAttribute("class", "mt-3");
         Products2Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
 
 
-        Products3Paragraph.setAttribute("id", "paragraph");
+        Products3Paragraph.setAttribute("id", "Products3Paragraph");
         Products3Paragraph.setAttribute("class", "mt-3");
         Products3Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
         
 
         //step 4 add/insert new element
-        Products1Content.appendChild(Product1Paragraph);
+        Products1Content.appendChild(Products1Paragraph);
         Products2Content.appendChild(Products2Paragraph);
         Products3Content.appendChild(Products3Paragraph);
 
@@ -134,17 +134,17 @@
         
 
         //step 3 configure new element
-        Services1Paragraph.setAttribute("id", "ProductParagraph");
+        Services1Paragraph.setAttribute("id", "Services1Paragraph");
         Services1Paragraph.setAttribute("class", "mt-3");
         Services1Paragraph.textContent = "I have developed several skills over the years but according to me, the most developed and brushed skill for me is having grip on coding for web-designing.";
         
         
-        Services2Paragraph.setAttribute("id", "paragraph");
+        Services2Paragraph.setAttribute("id", "Services2Paragraph");
         Services2Paragraph.setAttribute("class", "mt-3");
         Services2Paragraph.textContent = "Managing your time and allocating time to particular stuff which is necessary is very important to learn and I have developed at my own very well.";
 
 
-        Services3Paragraph.setAttribute("id", "paragraph");
+        Services3Paragraph.setAttribute("id", "Services3Paragraph");
         Services3Paragraph.setAttribute("class", "mt-3");
         Services3Paragraph.textContent = "I have worked on several projects with random people in a group and always I used to lead them with my imaginary mind and try to guide them throughout the project. So, this is also the best skill which i developed.";
         
