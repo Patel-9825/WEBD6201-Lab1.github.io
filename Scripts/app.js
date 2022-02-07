@@ -9,6 +9,18 @@
 // AKA Anonymous Self-Executing Function
 (function()
 {
+    let DocumentBody = document.body;
+    let Footer = document.createElement("footer");
+    let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
+    
+    </div>
+    </nav>`;
+
+    Footer.innerHTML = FooterNavBar;
+    DocumentBody.appendChild(Footer);
+
     /**
      * 
      * This function is used to add or edit the existing things in the About Us Page.
@@ -18,7 +30,7 @@
         console.log("About Us Page");
 
         let AboutContent = document.getElementsByTagName("main")[0];
-        let DocumentBody = document.body;
+        
 
         let About1Paragraph = document.createElement("p");
         let About2Paragraph = document.createElement("p");
@@ -34,7 +46,7 @@
 
         About3Paragraph.setAttribute("id", "About3Paragraph");
         About3Paragraph.setAttribute("class", "mt-3");
-        About3Paragraph.textContent = "PS: For the lab, it is supposed to work in group but i was unfortunate to have a partner so i decided to work on my own and TBH I liked the way i work at my own. I think it's enough to talk about my own good will. Sorry for that.";
+        About3Paragraph.textContent = "PS: For the lab, it is supposed to work in group but i was unfortunate to have a partner so i decided to work on my own and TBH I liked the way i work at my own. I think it's enough to talk about my own good will. Sorry for that. (Reload the site again if the image doesn't appear.)";
 
         AboutContent.appendChild(About1Paragraph);
         AboutContent.appendChild(About2Paragraph);
@@ -42,16 +54,7 @@
 
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
-        let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
         
-        </div>
-        </nav>`;
-
-        Footer.innerHTML = FooterNavBar;
-        DocumentBody.appendChild(Footer);
     }
 
     /**
@@ -63,60 +66,53 @@
         console.log("Products Page");
 
         //step 1 get a reference to an entry point(s)
-        let ProductContent = document.getElementsByTagName("main")[0];
+        let Products1Content = document.getElementsByTagName("main")[0];
 
-        let Image2Content = document.getElementsByTagName("main")[1];
+        let Products2Content = document.getElementsByTagName("main")[1];
 
-        let Image3Content = document.getElementsByTagName("main")[2];
-
-        let DocumentBody = document.body;
+        let Products3Content = document.getElementsByTagName("main")[2];
        
 
         //step 2 create an element
-        let ProductParagraph = document.createElement("p");
-        let Image2Paragraph = document.createElement("p");
-        let Image3Paragraph = document.createElement("p");
+        let ProductsParagraph = document.createElement("p");
+        let Products2Paragraph = document.createElement("p");
+        let Products3Paragraph = document.createElement("p");
         // let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is the Article Paragraph</p>`;
         
 
         //step 3 configure new element
-        ProductParagraph.setAttribute("id", "ProductParagraph");
-        ProductParagraph.setAttribute("class", "mt-3");
-        ProductParagraph.textContent = "Test automation was the first big project which i worked on using Selenium IDE and I have tested the whole website alongside my Group Members.";
+        Products1Paragraph.setAttribute("id", "ProductParagraph");
+        Products1Paragraph.setAttribute("class", "mt-3");
+        Products1Paragraph.textContent = "Test automation was the first big project which i worked on using Selenium IDE and I have tested the whole website alongside my Group Members.";
         
         
-        Image2Paragraph.setAttribute("id", "paragraph");
-        Image2Paragraph.setAttribute("class", "mt-3");
-        Image2Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+        Products2Paragraph.setAttribute("id", "paragraph");
+        Products2Paragraph.setAttribute("class", "mt-3");
+        Products2Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
 
 
-        Image3Paragraph.setAttribute("id", "paragraph");
-        Image3Paragraph.setAttribute("class", "mt-3");
-        Image3Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
+        Products3Paragraph.setAttribute("id", "paragraph");
+        Products3Paragraph.setAttribute("class", "mt-3");
+        Products3Paragraph.textContent = "Developing a system information for the company which was handling the day-care and providing the good database system for them to track their data. So, this was the second project which I worked when i was in 3rd Semester.";
         
 
         //step 4 add/insert new element
-        ProductContent.appendChild(ProductParagraph);
-        Image2Content.appendChild(Image2Paragraph);
-        Image3Content.appendChild(Image3Paragraph);
+        Products1Content.appendChild(Product1Paragraph);
+        Products2Content.appendChild(Products2Paragraph);
+        Products3Content.appendChild(Products3Paragraph);
 
 
 
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
-        let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
-        
-        </div>
-        </nav>`;
-
-        Footer.innerHTML = FooterNavBar;
-        DocumentBody.appendChild(Footer);
+       
        
     }
 
+    /**
+     *
+     * This function is used to add or edit the existing things in the Services Page.
+     */
     function DisplayServicesPage()
     {
         console.log("Services Page");
@@ -128,7 +124,6 @@
 
         let Services3Content = document.getElementsByTagName("main")[2];
 
-        let DocumentBody = document.body;
        
 
         //step 2 create an element
@@ -161,18 +156,13 @@
 
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
-        let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
         
-        </div>
-        </nav>`;
-
-        Footer.innerHTML = FooterNavBar;
-        DocumentBody.appendChild(Footer);
     }
 
+    /**
+     *
+     * This function is used to add or edit the existing things in the Home Page.
+     */
     function DisplayHomePage()
     {
 
@@ -183,7 +173,6 @@
         //step 1 get a reference to an entry point(s)
         let MainContent = document.getElementsByTagName("main")[0];
         let MainContent2 = document.getElementsByTagName("main")[0];
-        let DocumentBody = document.body;
 
         //step 2 create an element
         let MainParagraph = document.createElement("p");
@@ -225,28 +214,18 @@
 
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
-
-        let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
-        
-        </div>
-        </nav>`;
-
-        Footer.innerHTML = FooterNavBar;
-        DocumentBody.appendChild(Footer);
-
     }
 
+    /**
+     *
+     * This function is used to add or edit the existing things in the Contact Page.
+     */
     function DisplayContactPage()
     {
         console.log("Contact Us Page");
 
         let sendButton = document.getElementById("sendButton");
         let subscribeCheckBox = document.getElementById("subscribeCheckBox");
-
-        let DocumentBody = document.body;
 
         // localStorage.setItem("1", "Dhruv");
         // console.log(localStorage.getItem("1"));
@@ -278,23 +257,15 @@
 
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
-        let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
-        
-        </div>
-        </nav>`;
-
-        Footer.innerHTML = FooterNavBar;
-        DocumentBody.appendChild(Footer);
     }
 
+    /**
+     *
+     * This function is used to add or edit the existing things in the Contact-List Page.
+     */
     function DisplayContactListPage()
     {
         console.log("Contact List Page");
-
-        let DocumentBody = document.body;
 
         if(localStorage.length > 0) // check if localStorage has soemthing in it
         {
@@ -331,16 +302,7 @@
         }
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
-        let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="bottom: 0%;">
-        <div class="container-fluid">
-        <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
         
-        </div>
-        </nav>`;
-
-        Footer.innerHTML = FooterNavBar;
-        DocumentBody.appendChild(Footer);
     }
 
     // named function
