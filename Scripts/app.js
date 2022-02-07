@@ -1,8 +1,18 @@
+// Name: Dhruv Patel
+// Student ID: 100800111
+// Date Completed: 6th February, 2022
+// Reference:
+//          https://www.codegrepper.com/code-examples/javascript/javascript+to+redirect+to+another+page+after+5+seconds (for setting 3 sec timeout)
+
+
 // IIFE - Immediately Invoked Function Expression
 // AKA Anonymous Self-Executing Function
 (function()
 {
-    
+    /**
+     * 
+     * This function is used to add or edit the existing things in the About Us Page.
+     */
     function DisplayAboutPage()
     {
         console.log("About Us Page");
@@ -44,6 +54,10 @@
         DocumentBody.appendChild(Footer);
     }
 
+    /**
+     *
+     * This function is used to add or edit the existing things in the Products Page.
+     */
     function DisplayProductsPage()
     {
         console.log("Products Page");
@@ -239,20 +253,28 @@
         // localStorage.removeItem("1");
         // console.log(localStorage.length);
 
-        sendButton.addEventListener("click", function()
+        sendButton.addEventListener("click", function(event)
         {
-            //event.preventDefault(); // for Debugging
+            event.preventDefault(); // for Debugging
             if(subscribeCheckBox.checked)
             {
                 let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-                if(contact.serialize())
-                {
-                    let key = contact.FullName.substring(0, 1) + Date.now();
+                console.log(contact.toString());
+                // if(contact.serialize())
+                // {
+                //     let key = contact.FullName.substring(0, 1) + Date.now();
 
-                    localStorage.setItem(key, contact.serialize());
-                }
+                //     localStorage.setItem(key, contact.serialize());
+                // }
             }
+
+            setTimeout(function()
+            {
+                location.href = "index.html";
+            }, 3000);
         });
+
+        
 
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
@@ -310,7 +332,7 @@
         document.getElementById("ProductsLink").innerHTML = "Projects";
 
         let Footer = document.createElement("footer");
-        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        let FooterNavBar = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="bottom: 0%;">
         <div class="container-fluid">
         <a class="navbar-brand"><i class="far fa-copyright"></i>CopyRight 2022 </a> 
         

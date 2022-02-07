@@ -48,7 +48,7 @@ class Contact
         {
             return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`;
         }
-        console.error("One or more properties of the contac object are missing or empty");
+        console.error("One or more properties of the contact object are missing or empty");
         return null;
     }
 
